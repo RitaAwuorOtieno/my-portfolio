@@ -11,17 +11,15 @@ body {
   background-attachment: fixed;
 }
 
-/* Background image for the Home page */
+
 #Home{
   background-image: url('images/bg.jpg');
 }
 
-/* Background image for the about page */
 #about {
   background-image: url('images/IMG_4784.JPG');
 }
 
-/* Background image for the contact page */
 #contact {
   background-image: url('images/IMG_4784.JPG');
 }
@@ -29,3 +27,80 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-me-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: palevioletred; 
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+
+.about-me-overlay h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-me-overlay p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.email-link {
+  color: #a00c0c;
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+.email-link:hover {
+  text-decoration: underline; 
+  
+}
+
+
+.email-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.email-button:hover {
+  background-color: #8a0808;
+}
+
+.navbar{
+color: #a00c0c;
+}
+nav.hover{
+  color: #007BFF;
+}
+
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .image-row img {
+    width: 30%; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners */
+  }
