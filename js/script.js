@@ -19,11 +19,11 @@ function loadFooter() {
     const footer = document.getElementById('footer');
     if (footer) {
         footer.innerHTML = `
-            <p>&copy; ${new Date().getFullYear()} Your Name. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Rita Awuor Otieno. All rights reserved.</p>
             <div class="social-links">
                 <a href="#">LinkedIn</a> | 
-                <a href="#">GitHub</a> | 
-                <a href="#">Twitter</a>
+                <a href="https://github.com/RitaAwuorOtieno">GitHub</a> | 
+                <a href="https://instagram.com/_rita_aah">Instagram</a>
             </div>
         `;
     }
@@ -35,23 +35,18 @@ function loadProjects() {
     if (projectsContainer) {
         const projects = [
             {
-                title: "Project 1",
-                description: "Description of project 1",
+                title: "Calculator",
+                description: "This is an advanced calculator, basically, it is used for intergrated calculations. My role is to ensure that it serves the users specified purposes ",
                 technologies: ["HTML", "CSS", "JavaScript"],
-                link: "#"
+                link: "git@github.com:RitaAwuorOtieno/calculator.git"
             },
             {
-                title: "Project 2",
-                description: "Description of project 2",
+                title: "Custom Project 2",
+                description: "enter project description here",
                 technologies: ["React", "Node.js"],
-                link: "#"
+                link: "git@github.com:waliuba/group-4-.git"
             },
-            {
-                title: "Project 3",
-                description: "Description of project 3",
-                technologies: ["Python", "Django"],
-                link: "#"
-            }
+
         ];
         
         projects.forEach(project => {
@@ -77,7 +72,7 @@ function loadSkills() {
     const skillsList = document.getElementById('skills-list');
     if (skillsList) {
         const skills = [
-            "HTML5", "CSS3", "JavaScript", 
+            "HTML", "CSS", "JavaScript", 
             "React", "Node.js", "Git", 
             "Responsive Design", "UI/UX Design"
         ];
