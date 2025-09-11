@@ -1,75 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta name="description" content="Rita Awuor Otieno - Software Developer | Portfolio">
-        <meta name="keywords" content="your keywords, separated, by commas">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Rita Awuor Otieno</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-xl bg-danger navbar-dark">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-gradient-custom">
             <div class="container">
-              <a href="#" class="navbar-brand"> Rita Awuor Otieno</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" arialabel="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <div class="navbar-nav ms-auto">
-                  <a class="nav-item nav-link active"  aria-current="page" href="index.html">Home</a>
-                  <a class="nav-item nav-link active"  aria-current="page" href="about.html">About </a>
-                  <a class="nav-item nav-link active"  aria-current="page" href="projects.html">Projects</a>
-                  <a class="nav-item nav-link active"  aria-current="page" href="skills.html">skills</a>
-                  <a class="nav-item nav-link active"  aria-current="page" href="contact me.html">Contact me</a>
+                <a href="index.html" class="navbar-brand">
+                    <i class="fas fa-code me-2"></i>Rita Awuor Otieno
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-item nav-link" href="index.html">Home</a>
+                        <a class="nav-item nav-link active" href="about.html">About</a>
+                        <a class="nav-item nav-link" href="projects.html">Projects</a>
+                        <a class="nav-item nav-link" href="skills.html">Skills</a>
+                        <a class="nav-item nav-link" href="contact me.html">Contact me</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
-    
-    <main>
-        <section id="about">
-            <h1>About Rita Awuor Otieno</h1>
 
-            <div class="profile-image">
-    <img src="assets/images/IMG_4784.JPG" alt="Rita Awuor Otieno">
-</div>
-            <div class="about-content">
-                <div class="bio">
-                    <p>I'm a passionate  Full-Stack Developer with 6 months of experience specializing in JavaScript frameworks, responsive web design, and backend development. I thrive on transforming complex problems into elegant, user-friendly solutions.</p>
-                    
-                    <p>My journey in tech began when I discovered programming in college. Since then, I've had the privilege of working with various companies where I've developed [Mention key achievements or types of projects, e.g., "scalable web applications and interactive user interfaces"].</p>
-                    
-                    <p>What drives me is the constant evolution of web technologies and creating digital experiences that make people's lives easier. I believe in clean code, thoughtful design, and continuous learning.</p>
-                    
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying outdoor activities. I'm always excited to collaborate on interesting projects and connect with fellow developers.</p>
+    <main class="container my-5">
+        <!-- Hero Section -->
+        <section class="about-hero text-center mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">About Me</h1>
+                    <p class="lead text-muted">Get to know my journey, passion, and what drives me as a developer</p>
                 </div>
-                <div class="skills">
-                    <h2>Technical Skills</h2>
-                    <ul id="skills-list">
-                        <li>JavaScript (ES6+)</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>React.js</li>
-                        <li>Node.js</li>
-                        <li>Git & GitHub</li>
-                        <li>Responsive Web Design</li>
-                        <li>RESTful APIs</li>
-                        <li>UI/UX Design Principles</li>
-                    </ul>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="profile-section mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="profile-image-container mx-auto">
+                        <img src="https://placehold.co/300x300/dc3545/white?text=R" alt="Rita Awuor Otieno" class="profile-image img-fluid rounded-circle shadow">
+                        <div class="profile-overlay rounded-circle">
+                            <div class="profile-icons">
+                                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+                                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="mb-3">Hello, I'm Rita Awuor Otieno</h2>
+                    <p class="lead">A passionate Frontend Developer with a love for creating beautiful, functional web experiences.</p>
+                    <div class="d-flex flex-wrap gap-2 my-4">
+                        <span class="badge bg-primary">HTML5</span>
+                        <span class="badge bg-success">CSS3</span>
+                        <span class="badge bg-warning text-dark">JavaScript</span>
+                        <span class="badge bg-info">Bootstrap</span>
+                        <span class="badge bg-danger">Git</span>
+                    </div>
+                    <a href="contact me.html" class="btn btn-danger btn-lg mt-2">Let's Connect</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Journey Section -->
+        <section class="journey-section mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-road me-2"></i>My Journey</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="journey-card p-4 h-100 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="journey-icon me-3">
+                                <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-0">Education</h4>
+                        </div>
+                        <p>I began my coding journey through the Institute of Software Development. My passion for web development started when I built my first website and saw the power of turning ideas into digital reality.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="journey-card p-4 h-100 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="journey-icon me-3">
+                                <i class="fas fa-laptop-code fa-2x text-success"></i>
+                            </div>
+                            <h4 class="mb-0">Experience</h4>
+                        </div>
+                        <p>I've worked on various projects ranging from personal websites to functional and responsive websites. Each project has helped me grow as a developer and problem-solver.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Preview -->
+        <section class="skills-preview mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-tools me-2"></i>Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="skill-item p-3">
+                        <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                        <h5>HTML5</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="skill-item p-3">
+                        <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
+                        <h5>CSS3</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="skill-item p-3">
+                        <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+                        <h5>JavaScript</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="skill-item p-3">
+                        <i class="fab fa-bootstrap fa-3x text-purple mb-3"></i>
+                        <h5>Bootstrap</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-purple" role="progressbar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="skills.html" class="btn btn-outline-danger">View All Skills</a>
+            </div>
+        </section>
+
+        <!-- Personal Interests -->
+        <section class="interests-section">
+            <h2 class="text-center mb-4"><i class="fas fa-heart me-2"></i>Beyond Coding</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="interest-card p-4">
+                        <i class="fas fa-book-reader fa-3x text-info mb-3"></i>
+                        <h4>Continuous Learning</h4>
+                        <p>I'm always exploring new technologies and frameworks to expand my skill set.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="interest-card p-4">
+                        <i class="fas fa-paint-brush fa-3x text-success mb-3"></i>
+                        <h4>UI/Design</h4>
+                        <p>I have a keen interest in user interface design and creating visually appealing experiences.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="interest-card p-4">
+                        <i class="fas fa-hiking fa-3x text-warning mb-3"></i>
+                        <h4>Outdoor Activities</h4>
+                        <p>When not coding, I enjoy hiking and exploring nature to refresh my mind.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer id="footer">
-        <p>&copy; 2025 Rita Awuor Otieno. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/RitaAwuorOtieno">GitHub</a> |
-            <a href="https://instagram.com/_rita_aah">Instagram</a> 
-           
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Rita Awuor Otieno. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

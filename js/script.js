@@ -19,11 +19,11 @@ function loadFooter() {
     const footer = document.getElementById('footer');
     if (footer) {
         footer.innerHTML = `
-            <p>&copy; ${new Date().getFullYear()} Rita Awuor Otieno. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Your Name. All rights reserved.</p>
             <div class="social-links">
                 <a href="#">LinkedIn</a> | 
-                <a href="https://github.com/RitaAwuorOtieno">GitHub</a> | 
-                <a href="https://instagram.com/_rita_aah">Instagram</a>
+                <a href="#">GitHub</a> | 
+                <a href="#">Twitter</a>
             </div>
         `;
     }
@@ -36,17 +36,16 @@ function loadProjects() {
         const projects = [
             {
                 title: "Calculator",
-                description: "This is an advanced calculator, basically, it is used for intergrated calculations. My role is to ensure that it serves the users specified purposes ",
+                description: "basice Calculator",
                 technologies: ["HTML", "CSS", "JavaScript"],
-                link: "git@github.com:RitaAwuorOtieno/calculator.git"
+                link: "https://github.com/RitaAwuorOtieno/calculator.git"
             },
             {
-                title: "Custom Project 2",
-                description: "enter project description here",
+                title: "Project 2",
+                description: "group project",
                 technologies: ["React", "Node.js"],
-                link: "git@github.com:waliuba/group-4-.git"
-            },
-
+                link: "https://github.com/waliuba/group-4-.git"
+            }
         ];
         
         projects.forEach(project => {
@@ -72,7 +71,7 @@ function loadSkills() {
     const skillsList = document.getElementById('skills-list');
     if (skillsList) {
         const skills = [
-            "HTML", "CSS", "JavaScript", 
+            "HTML5", "CSS3", "JavaScript", 
             "React", "Node.js", "Git", 
             "Responsive Design", "UI/UX Design"
         ];
