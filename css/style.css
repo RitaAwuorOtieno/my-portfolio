@@ -44,7 +44,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #c4cfd6;
 }
 
 button[type="submit"] {
@@ -117,7 +117,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #3498db;
+    color: #87949c;
 }
 
 /* Main content */
@@ -261,11 +261,11 @@ body {
 }
 
 .text-purple {
-    color: #7952b3 !important;
+    color: #dad6e0 !important;
 }
 
 .bg-purple {
-    background-color: #7952b3 !important;
+    background-color: #e1dde7 !important;
 }
 
 .progress {
@@ -313,7 +313,7 @@ body {
 /* Contact Page Styles */
 
 .contact-body {
-    background: #195b9c;
+    background: #bdc6cf;
     min-height: 100vh;
     padding: 4rem 0;
 }
@@ -324,7 +324,7 @@ body {
 .contact-info-card,
 .contact-form-card {
     border-radius: 15px;
-    background: rgb(73, 5, 136);
+    background: rgb(166, 164, 168);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
