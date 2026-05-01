@@ -3,25 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills - Rita Awuor Otieno</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Rita Awuor Otieno - Full-Stack Developer Skills: React, Node.js, Laravel, Firebase, JavaScript, HTML5, CSS3, Bootstrap, Git, and more. IST Diploma Graduate 2026.">
+    <title>Skills & Expertise | Rita Awuor Otieno - Full-Stack Developer</title>
+    
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fefaf7 0%, #fff5f0 100%);
+            color: #1a1a2e;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.3px;
+            transition: 0.3s;
+        }
+        .navbar-brand:hover {
+            transform: scale(1.02);
+            color: #ffd966 !important;
+        }
+        .nav-link {
+            font-weight: 500;
+            margin: 0 0.2rem;
+            transition: all 0.3s;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Page Header */
+        .skills-header {
+            background: linear-gradient(120deg, #fff5ee 0%, #ffe6dc 100%);
+            border-radius: 48px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .skills-header h1 {
+            background: linear-gradient(135deg, #b91c1c, #e65c4f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        /* Skill Category Cards */
+        .skill-category {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem;
+            height: 100%;
+            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid #f0e2da;
+        }
+        .skill-category:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -12px rgba(185,28,28,0.12);
+            border-color: #ffcdc1;
+        }
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .skill-item {
+            margin-bottom: 1.2rem;
+        }
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+        .progress {
+            height: 8px;
+            border-radius: 10px;
+            background-color: #f0e2da;
+        }
+        .progress-bar {
+            border-radius: 10px;
+            transition: width 1s ease-out;
+        }
+
+        /* Tech Stack Badges */
+        .tech-badge {
+            background: #f8f0ec;
+            color: #b91c1c;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tech-badge:hover {
+            background: #dc3545;
+            color: white;
+            transform: translateY(-3px);
+        }
+        .certificate-card {
+            background: linear-gradient(120deg, #1e2a3a, #0f172a);
+            border-radius: 28px;
+            transition: 0.3s;
+        }
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #0f0f1a;
+        }
+        .social-links a {
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: #ff6b6b !important;
+        }
+
+        @media (max-width: 768px) {
+            .skills-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-xl bg-danger navbar-dark">
+        <nav class="navbar navbar-expand-xl bg-danger navbar-dark py-2">
             <div class="container">
-                <a href="#" class="navbar-brand">Rita Awuor Otieno</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                <a href="index.html" class="navbar-brand">
+                    <i class="fas fa-code me-2"></i>Rita Awuor Otieno
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link" href="index.html">Home</a>
-                        <a class="nav-item nav-link" href="about.html">About</a>
-                        <a class="nav-item nav-link" href="projects.html">Projects</a>
-                        <a class="nav-item nav-link active" href="skills.html">Skills</a>
-                        <a class="nav-item nav-link" href="contact me.html">Contact me</a>
+                        <a class="nav-item nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                        <a class="nav-item nav-link" href="about.html"><i class="fas fa-user me-1"></i>About</a>
+                        <a class="nav-item nav-link" href="projects.html"><i class="fas fa-project-diagram me-1"></i>Projects</a>
+                        <a class="nav-item nav-link active" href="skills.html"><i class="fas fa-cogs me-1"></i>Skills</a>
+                        <a class="nav-item nav-link" href="contact me.html"><i class="fas fa-envelope me-1"></i>Contact me</a>
                     </div>
                 </div>
             </div>
@@ -29,35 +177,282 @@
     </header>
 
     <main class="container my-5">
-        <h1 class="text-center mb-4">My Skills</h1>
-        <div class="row">
+        <!-- Header Section -->
+        <div class="skills-header">
+            <span class="badge bg-danger bg-opacity-10 text-danger px-4 py-2 rounded-pill mb-3">
+                <i class="fas fa-chalkboard-user me-2"></i>Expertise & Technologies
+            </span>
+            <h1 class="display-5 fw-bold mb-3">My Full-Stack Developer Skillset</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">From modern frontend frameworks to robust backend architectures — here's what I bring to the table.</p>
+        </div>
+
+        <!-- Skill Categories with Progress Bars -->
+        <div class="row g-4 mb-5">
+            <!-- Frontend Skills -->
             <div class="col-md-6">
-                <h3>Frontend Development</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Bootstrap</li>
-                    <li>Responsive Design</li>
-                </ul>
+                <div class="skill-category">
+                    <div class="text-center">
+                        <i class="fas fa-laptop-code category-icon text-primary"></i>
+                        <h3 class="fw-bold mb-4">Frontend Development</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-react text-primary me-2"></i>React.js</span><span>90%</span></div>
+                        <div class="progress"><div class="progress-bar bg-primary" style="width: 90%" data-progress="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-js text-warning me-2"></i>JavaScript (ES6+)</span><span>88%</span></div>
+                        <div class="progress"><div class="progress-bar bg-warning" style="width: 88%" data-progress="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-html5 text-danger me-2"></i>HTML5</span><span>95%</span></div>
+                        <div class="progress"><div class="progress-bar bg-danger" style="width: 95%" data-progress="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-css3-alt text-info me-2"></i>CSS3 / Tailwind</span><span>90%</span></div>
+                        <div class="progress"><div class="progress-bar bg-info" style="width: 90%" data-progress="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-bootstrap text-purple me-2"></i>Bootstrap 5</span><span>92%</span></div>
+                        <div class="progress"><div class="progress-bar" style="width: 92%; background: linear-gradient(90deg, #6f42c1, #e83e8c);" data-progress="92"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-mobile-alt text-secondary me-2"></i>Responsive Design</span><span>94%</span></div>
+                        <div class="progress"><div class="progress-bar bg-secondary" style="width: 94%" data-progress="94"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend & Database Skills -->
+            <div class="col-md-6">
+                <div class="skill-category">
+                    <div class="text-center">
+                        <i class="fas fa-server category-icon text-success"></i>
+                        <h3 class="fw-bold mb-4">Backend & Databases</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-node-js text-success me-2"></i>Node.js / Express</span><span>85%</span></div>
+                        <div class="progress"><div class="progress-bar bg-success" style="width: 85%" data-progress="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-laravel text-danger me-2"></i>Laravel (PHP)</span><span>82%</span></div>
+                        <div class="progress"><div class="progress-bar bg-danger" style="width: 82%" data-progress="82"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-database text-warning me-2"></i>MySQL</span><span>84%</span></div>
+                        <div class="progress"><div class="progress-bar bg-warning" style="width: 84%" data-progress="84"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-leaf text-success me-2"></i>MongoDB</span><span>80%</span></div>
+                        <div class="progress"><div class="progress-bar bg-success" style="width: 80%" data-progress="80"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-fire text-warning me-2"></i>Firebase (Auth, Firestore)</span><span>86%</span></div>
+                        <div class="progress"><div class="progress-bar" style="width: 86%; background: #f7b32b;" data-progress="86"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-cloud-arrow-up text-info me-2"></i>RESTful APIs</span><span>87%</span></div>
+                        <div class="progress"><div class="progress-bar bg-info" style="width: 87%" data-progress="87"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools & Version Control + Soft Skills Row -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="skill-category">
+                    <div class="text-center">
+                        <i class="fas fa-tools category-icon text-secondary"></i>
+                        <h3 class="fw-bold mb-4">Dev Tools & Workflow</h3>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-git-alt text-danger me-2"></i>Git & GitHub</span><span>90%</span></div>
+                        <div class="progress"><div class="progress-bar bg-danger" style="width: 90%" data-progress="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-code me-2 text-primary"></i>VS Code / IDE</span><span>95%</span></div>
+                        <div class="progress"><div class="progress-bar bg-primary" style="width: 95%" data-progress="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fab fa-npm me-2 text-danger"></i>npm / Yarn</span><span>88%</span></div>
+                        <div class="progress"><div class="progress-bar bg-secondary" style="width: 88%" data-progress="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-terminal me-2 text-dark"></i>Command Line / Bash</span><span>85%</span></div>
+                        <div class="progress"><div class="progress-bar bg-dark" style="width: 85%" data-progress="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span><i class="fas fa-folder-tree me-2 text-warning"></i>Postman / API Testing</span><span>84%</span></div>
+                        <div class="progress"><div class="progress-bar bg-warning" style="width: 84%" data-progress="84"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="skill-category">
+                    <div class="text-center">
+                        <i class="fas fa-brain category-icon text-info"></i>
+                        <h3 class="fw-bold mb-4">Soft Skills & Methodologies</h3>
+                    </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6">
+                            <div class="tech-badge w-100 justify-content-center"><i class="fas fa-users"></i> Team Collaboration</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-badge w-100 justify-content-center"><i class="fas fa-comments"></i> Communication</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-badge w-100 justify-content-center"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-badge w-100 justify-content-center"><i class="fas fa-clock"></i> Time Management</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-badge w-100 justify-content-center"><i class="fas fa-code-branch"></i> Git Flow</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-badge w-100 justify-content-center"><i class="fas fa-chalkboard"></i> Agile / Scrum</div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="text-center mt-2">
+                        <span class="badge bg-dark bg-opacity-10 text-dark px-3 py-2 rounded-pill"><i class="fas fa-language me-1"></i> English (Fluent)</span>
+                        <span class="badge bg-dark bg-opacity-10 text-dark px-3 py-2 rounded-pill ms-2"><i class="fas fa-globe me-1"></i> Swahili (Native)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Badges Showcase -->
+        <div class="mb-5">
+            <h3 class="text-center fw-bold mb-4"><i class="fas fa-cubes me-2 text-danger"></i>Technologies I Work With</h3>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="tech-badge"><i class="fab fa-react fa-fw"></i> React</span>
+                <span class="tech-badge"><i class="fab fa-node-js fa-fw"></i> Node.js</span>
+                <span class="tech-badge"><i class="fab fa-laravel fa-fw"></i> Laravel</span>
+                <span class="tech-badge"><i class="fas fa-fire fa-fw"></i> Firebase</span>
+                <span class="tech-badge"><i class="fab fa-js fa-fw"></i> JavaScript</span>
+                <span class="tech-badge"><i class="fab fa-bootstrap fa-fw"></i> Bootstrap</span>
+                <span class="tech-badge"><i class="fas fa-database fa-fw"></i> MongoDB</span>
+                <span class="tech-badge"><i class="fas fa-database fa-fw"></i> MySQL</span>
+                <span class="tech-badge"><i class="fab fa-php fa-fw"></i> PHP</span>
+                <span class="tech-badge"><i class="fab fa-git-alt fa-fw"></i> Git</span>
+                <span class="tech-badge"><i class="fas fa-cloud fa-fw"></i> REST APIs</span>
+            </div>
+        </div>
+
+        <!-- Certifications & Education Section (IST Diploma + Computer Pride) -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="certificate-card p-4 text-white h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-graduation-cap fa-3x text-warning me-3"></i>
+                        <div>
+                            <h4 class="fw-bold mb-0">Full-Stack Web Development Diploma</h4>
+                            <p class="text-white-50 mb-0">Institute of Software Technologies</p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-calendar-check me-2 text-danger"></i> <strong>Graduated:</strong> 18th February 2026</p>
+                    <p>Completed a comprehensive full-stack program covering modern frontend frameworks (React), backend technologies (Node.js, Laravel), Firebase integration, database management, and building production-ready applications.</p>
+                    <div class="mt-2">
+                        <span class="badge bg-warning text-dark me-1">React</span>
+                        <span class="badge bg-info me-1">Node.js</span>
+                        <span class="badge bg-light text-dark me-1">Laravel</span>
+                        <span class="badge bg-secondary me-1">Firebase</span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>VS Code</li>
-                    <li>npm</li>
-                    <li>Command Line</li>
-                </ul>
+                <div class="certificate-card p-4 text-white h-100" style="background: linear-gradient(120deg, #2c3e50, #1a2632);">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-certificate fa-3x text-warning me-3"></i>
+                        <div>
+                            <h4 class="fw-bold mb-0">Web Design Certificate</h4>
+                            <p class="text-white-50 mb-0">Computer Pride | 2025</p>
+                        </div>
+                    </div>
+                    <p>Professional certification in modern web design principles, UI/UX fundamentals, responsive layouts, and frontend frameworks. This foundational training ignited my passion for building beautiful and functional interfaces.</p>
+                    <div class="mt-2">
+                        <span class="badge bg-light text-dark me-1">HTML/CSS</span>
+                        <span class="badge bg-light text-dark me-1">UI/UX</span>
+                        <span class="badge bg-light text-dark me-1">Responsive Design</span>
+                        <span class="badge bg-light text-dark me-1">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Currently Learning Section -->
+        <div class="bg-white rounded-4 p-4 p-md-5 shadow-sm text-center" style="background: linear-gradient(120deg, #fffbf8, #fff5ef);">
+            <i class="fas fa-chalkboard-teacher fa-3x text-danger mb-3"></i>
+            <h3 class="fw-bold">Always Learning & Growing</h3>
+            <p class="text-muted mb-3">Currently diving deeper into Next.js, TypeScript, and advanced cloud integrations to build even more powerful web applications.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <span class="badge bg-dark px-3 py-2">Next.js</span>
+                <span class="badge bg-dark px-3 py-2">TypeScript</span>
+                <span class="badge bg-dark px-3 py-2">GraphQL</span>
+                <span class="badge bg-dark px-3 py-2">Docker</span>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Rita Awuor Otieno. All rights reserved.</p>
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5 class="fw-bold">Rita Awuor Otieno</h5>
+                    <p class="text-white-50 small mb-0">&copy; 2026 Rita Awuor Otieno. Full-Stack Developer | All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="https://github.com/RitaAwuorOtieno" class="text-white mx-2" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2" target="_blank" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ensure progress bars are animated on load if visible
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            const animateBar = (bar) => {
+                const width = bar.style.width;
+                if (width === '0%' || !width) {
+                    const parent = bar.closest('.progress');
+                    if (parent) {
+                        const skillItem = parent.closest('.skill-item');
+                        if (skillItem) {
+                            const percentText = skillItem.querySelector('.skill-info span:last-child')?.innerText.replace('%', '');
+                            if (percentText) {
+                                bar.style.width = percentText + '%';
+                                bar.setAttribute('aria-valuenow', percentText);
+                            }
+                        }
+                    }
+                }
+            };
+            progressBars.forEach(bar => {
+                if (bar.getBoundingClientRect().top < window.innerHeight - 100) {
+                    animateBar(bar);
+                } else {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                animateBar(entry.target);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.3 });
+                    observer.observe(bar);
+                }
+            });
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
