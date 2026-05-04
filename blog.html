@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Rita Awuor Otieno - Full-Stack Developer</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fefaf7 0%, #fff5f0 100%);
+            color: #1a1a2e;
+        }
+        .navbar { background: linear-gradient(135deg, #c9182c 0%, #a31527 100%) !important; }
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .blog-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #dc3545;
+        }
+        .category-badge {
+            background: #f0e2da;
+            color: #b91c1c;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .sidebar-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #f0e2da;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0 5px 10px 0;
+            transition: 0.3s;
+        }
+        .tag:hover {
+            background: #dc3545;
+            color: white;
+        }
+        footer { background: #0f0f1a; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-xl navbar-dark py-2">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><i class="fas fa-code me-2"></i>Rita Awuor Otieno</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="skills.html">Skills</a>
+                    <a class="nav-link active" href="blog.html">Blog</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <!-- Blog Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3">📝 My Tech Blog</h1>
+            <p class="lead text-muted">Sharing my journey, tutorials, and insights in web development</p>
+        </div>
+
+        <div class="row">
+            <!-- Main Blog Content -->
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    <!-- Blog Post 1 -->
+                    <div class="col-12">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" alt="React Tutorial" class="blog-img">
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category-badge"><i class="fab fa-react me-1"></i> React</span>
+                                    <span class="blog-meta"><i class="far fa-calendar-alt me-1"></i> March 15, 2026</span>
+                                </div>
+                                <h3 class="fw-bold mb-2">Getting Started with React Hooks</h3>
+                                <p class="text-muted">Learn how to use useState, useEffect, and custom hooks to build powerful React applications. A comprehensive guide for beginners.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="far fa-clock me-1"></i> 8 min read</span>
+                                    <a href="#" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="col-12">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800" alt="Node.js" class="blog-img">
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category-badge"><i class="fab fa-node-js me-1"></i> Backend</span>
+                                    <span class="blog-meta"><i class="far fa-calendar-alt me-1"></i> March 5, 2026</span>
+                                </div>
+                                <h3 class="fw-bold mb-2">Building REST APIs with Node.js & Express</h3>
+                                <p class="text-muted">Complete guide to creating scalable RESTful APIs, middleware setup, error handling, and database integration with MongoDB.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="far fa-clock me-1"></i> 12 min read</span>
+                                    <a href="#" class="btn btn-sm btn-outline-danger">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="col-12">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800" alt="Firebase" class="blog-img">
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category-badge"><i class="fas fa-fire me-1"></i> Firebase</span>
+                                    <span class="blog-meta"><i class="far fa-calendar-alt me-1"></i> February 20, 2026</span>
+                                </div>
+                                <h3 class="fw-bold mb-2">Firebase Authentication Made Easy</h3>
+                                <p class="text-muted">Implement Google, email/password, and phone authentication in your web apps with Firebase. Step-by-step tutorial with code examples.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="far fa-clock me-1"></i> 10 min read</span>
+                                    <a href="#" class="btn btn-sm btn-outline-danger">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 4 - My Diploma Journey -->
+                    <div class="col-12">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Graduation" class="blog-img">
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category-badge"><i class="fas fa-graduation-cap me-1"></i> Journey</span>
+                                    <span class="blog-meta"><i class="far fa-calendar-alt me-1"></i> February 18, 2026</span>
+                                </div>
+                                <h3 class="fw-bold mb-2">My Full-Stack Diploma Journey at IST</h3>
+                                <p class="text-muted">Reflecting on my 2-year journey, challenges overcome, and lessons learned while earning my Full-Stack Web Development Diploma.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="far fa-clock me-1"></i> 15 min read</span>
+                                    <a href="#" class="btn btn-sm btn-outline-danger">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search -->
+                <div class="sidebar-card">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-search me-2 text-danger"></i>Search</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search articles...">
+                        <button class="btn btn-danger"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-card">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-folder me-2 text-danger"></i>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none py-1 d-block">📱 React (5)</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none py-1 d-block">⚡ Node.js (3)</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none py-1 d-block">🔥 Firebase (4)</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none py-1 d-block">🎨 UI/UX (2)</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none py-1 d-block">📚 Career Tips (3)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="sidebar-card">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-tags me-2 text-danger"></i>Popular Tags</h5>
+                    <div>
+                        <span class="tag">#React</span>
+                        <span class="tag">#NodeJS</span>
+                        <span class="tag">#JavaScript</span>
+                        <span class="tag">#Firebase</span>
+                        <span class="tag">#Laravel</span>
+                        <span class="tag">#WebDev</span>
+                        <span class="tag">#FullStack</span>
+                        <span class="tag">#MongoDB</span>
+                        <span class="tag">#Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="sidebar-card bg-danger text-white">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-envelope me-2"></i>Newsletter</h5>
+                    <p>Get the latest posts delivered to your inbox.</p>
+                    <input type="email" class="form-control mb-2" placeholder="Your email">
+                    <button class="btn btn-light text-danger w-100 fw-bold">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Blog Reading -->
+    <div class="modal fade" id="blogModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">Getting Started with React Hooks</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800" class="img-fluid rounded mb-3" alt="React">
+                    <p class="text-muted"><i class="far fa-calendar-alt me-1"></i> March 15, 2026 | 8 min read</p>
+                    <hr>
+                    <h4>What are React Hooks?</h4>
+                    <p>React Hooks are functions that let you use state and other React features in functional components. They were introduced in React 16.8 and have revolutionized how we build React applications.</p>
+                    
+                    <h5 class="mt-4">useState Hook</h5>
+                    <pre class="bg-light p-3 rounded"><code>const [count, setCount] = useState(0);</code></pre>
+                    
+                    <h5 class="mt-4">useEffect Hook</h5>
+                    <pre class="bg-light p-3 rounded"><code>useEffect(() => {
+  // Side effect logic
+  return () => {
+    // Cleanup
+  };
+}, [dependencies]);</code></pre>
+                    
+                    <p>Hooks have made React code more reusable, cleaner, and easier to understand. In my journey at IST, learning hooks was a game-changer for building complex applications efficiently.</p>
+                    
+                    <div class="alert alert-info mt-3">
+                        <i class="fas fa-lightbulb me-2"></i> Pro Tip: Start with useState and useEffect, then explore useReducer, useContext, and custom hooks.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger"><i class="fab fa-twitter me-2"></i>Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Rita Awuor Otieno. Full-Stack Developer | Sharing knowledge through code</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -3,367 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio projects by Rita Awuor Otieno - Full-Stack Developer. Calculator app, Metameta Children's Home campaign, Group collaboration project using React, Node.js, Firebase and more.">
-    <title>Projects | Rita Awuor Otieno - Full-Stack Developer Portfolio</title>
+    <title>Projects | Rita Awuor Otieno - Full-Stack Portfolio</title>
     
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #fefaf7 0%, #fff5f0 100%);
-            color: #1a1a2e;
         }
-
-        /* Navbar styling */
-        .navbar {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -0.3px;
-            transition: 0.3s;
-        }
-        .navbar-brand:hover {
-            transform: scale(1.02);
-            color: #ffd966 !important;
-        }
-        .nav-link {
-            font-weight: 500;
-            margin: 0 0.2rem;
-            transition: all 0.3s;
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-        }
-        .nav-link:hover, .nav-link.active {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Page header */
-        .projects-header {
-            background: linear-gradient(120deg, #fff5ee 0%, #ffe6dc 100%);
-            border-radius: 48px;
-            padding: 2.5rem 2rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        .projects-header h1 {
-            background: linear-gradient(135deg, #b91c1c, #e65c4f);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            font-weight: 800;
-        }
-
-        /* Project Cards */
-        .project-card {
-            background: white;
-            border: none;
-            border-radius: 28px;
-            overflow: hidden;
-            transition: all 0.35s ease;
-            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 40px -12px rgba(185,28,28,0.25);
-        }
-        .card-img-top {
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        .project-card:hover .card-img-top {
-            transform: scale(1.03);
-        }
-        .card-body {
-            padding: 1.8rem;
-            flex: 1;
-        }
-        .tech-badge {
-            background: #f8f0ec;
-            color: #b91c1c;
-            padding: 0.3rem 0.9rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
-        .card-footer {
+        .navbar { background: linear-gradient(135deg, #c9182c 0%, #a31527 100%) !important; }
+        .filter-btn {
             background: transparent;
-            border-top: 1px solid #f0e2da;
-            padding: 1.2rem 1.8rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .btn-custom-primary {
-            background: #dc3545;
-            border: none;
-            transition: all 0.25s;
-            border-radius: 40px;
-            padding: 0.5rem 1.4rem;
-            font-weight: 600;
-        }
-        .btn-custom-primary:hover {
-            background: #b02a37;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(220,53,69,0.3);
-        }
-        .btn-outline-custom {
             border: 2px solid #dc3545;
             color: #dc3545;
-            background: transparent;
+            padding: 8px 20px;
             border-radius: 40px;
-            padding: 0.5rem 1.4rem;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: 0.3s;
+            margin: 5px;
         }
-        .btn-outline-custom:hover {
+        .filter-btn.active, .filter-btn:hover {
             background: #dc3545;
             color: white;
-            transform: translateY(-2px);
         }
-        footer {
-            background: #0f0f1a;
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            height: 100%;
+            display: none;
         }
-        .social-links a {
-            transition: all 0.3s;
-            display: inline-block;
+        .project-card.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
         }
-        .social-links a:hover {
-            transform: translateY(-3px);
-            color: #ff6b6b !important;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        @media (max-width: 768px) {
-            .projects-header h1 {
-                font-size: 2rem;
-            }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
+        footer { background: #0f0f1a; }
     </style>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-xl bg-danger navbar-dark py-2">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <i class="fas fa-code me-2"></i>Rita Awuor Otieno
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
-                        <a class="nav-item nav-link" href="about.html"><i class="fas fa-user me-1"></i>About</a>
-                        <a class="nav-item nav-link active" href="projects.html"><i class="fas fa-project-diagram me-1"></i>Projects</a>
-                        <a class="nav-item nav-link" href="skills.html"><i class="fas fa-cogs me-1"></i>Skills</a>
-                        <a class="nav-item nav-link" href="contact me.html"><i class="fas fa-envelope me-1"></i>Contact me</a>
-                    </div>
+
+    <nav class="navbar navbar-expand-xl navbar-dark py-2">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><i class="fas fa-code me-2"></i>Rita Awuor Otieno</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link active" href="projects.html">Projects</a>
+                    <a class="nav-link" href="skills.html">Skills</a>
+                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main class="container my-5">
-        <!-- Hero / Header Section -->
-        <div class="projects-header">
-            <span class="badge bg-danger bg-opacity-10 text-danger px-4 py-2 rounded-pill mb-3">
-                <i class="fas fa-laptop-code me-2"></i>Featured Work
-            </span>
-            <h1 class="display-5 fw-bold mb-3">My Full-Stack Projects</h1>
-            <p class="lead text-muted mx-auto" style="max-width: 700px;">A collection of web applications built with modern technologies — from interactive calculators to real-world charity campaigns and collaborative full-stack platforms.</p>
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3">My Projects</h1>
+            <p class="lead text-muted">Explore my work across different technologies</p>
         </div>
 
-        <div class="row g-5">
-            <!-- PROJECT 1: Calculator -->
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card card h-100">
-                    <img src="https://placehold.co/800x500/dc3545/white?text=Calculator+App" class="card-img-top" alt="Calculator App Preview - JavaScript, HTML, CSS">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h3 class="card-title fw-bold mb-0">Smart Calculator</h3>
-                            <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill">Featured</span>
-                        </div>
-                        <p class="card-text text-muted">A fully functional calculator that solves basic arithmetic operations with a clean, responsive UI. Built with vanilla JavaScript, HTML5, and Bootstrap for seamless user experience on any device.</p>
-                        <div class="mt-3">
-                            <span class="tech-badge"><i class="fab fa-html5 me-1"></i>HTML5</span>
-                            <span class="tech-badge"><i class="fab fa-css3-alt me-1"></i>CSS3</span>
-                            <span class="tech-badge"><i class="fab fa-js me-1"></i>JavaScript</span>
-                            <span class="tech-badge"><i class="fab fa-bootstrap me-1"></i>Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/RitaAwuorOtieno/calculator" class="btn btn-custom-primary" target="_blank"><i class="fab fa-github me-2"></i>GitHub</a>
-                        <a href="https://ritaawuorotieno.github.io/calculator" class="btn btn-outline-custom" target="_blank"><i class="fas fa-external-link-alt me-2"></i>Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 2: Group Work / Full-Stack Collaboration -->
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card card h-100">
-                    <img src="https://placehold.co/800x500/0a2f44/white?text=Group+Project+-+MERN+Stack" class="card-img-top" alt="Group Project Full-Stack Collaboration">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mb-3">Collaborative Group Project</h3>
-                        <p class="card-text text-muted">A team-based full-stack application built with React, Node.js, and MongoDB. This project showcases real-time collaboration, REST API integration, and responsive frontend components. Part of our IST diploma group assignment.</p>
-                        <div class="mt-3">
-                            <span class="tech-badge"><i class="fab fa-react me-1"></i>React</span>
-                            <span class="tech-badge"><i class="fab fa-node-js me-1"></i>Node.js</span>
-                            <span class="tech-badge"><i class="fas fa-database me-1"></i>MongoDB</span>
-                            <span class="tech-badge"><i class="fab fa-js me-1"></i>Express</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/waliuba/group-4-" class="btn btn-custom-primary" target="_blank"><i class="fab fa-github me-2"></i>GitHub Repo</a>
-                        <a href="https://github.com/waliuba/group-4-" class="btn btn-outline-custom" target="_blank"><i class="fas fa-globe me-2"></i>Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 3: Metameta Children's Home (Charity Campaign) -->
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card card h-100">
-                    <img src="https://placehold.co/800x500/2d6a4f/white?text=Metameta+Children's+Home" class="card-img-top" alt="Metameta Children's Home Awareness Campaign">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mb-3">Metameta Children's Home</h3>
-                        <p class="card-text text-muted">A compassionate web platform to raise awareness and funds for Meta Meta Children's Home in Kangemi, Nairobi. Integrated Firebase for donations tracking and community engagement. Features responsive layouts, campaign updates, and contact forms.</p>
-                        <div class="mt-3">
-                            <span class="tech-badge"><i class="fab fa-html5 me-1"></i>HTML5</span>
-                            <span class="tech-badge"><i class="fab fa-css3-alt me-1"></i>CSS3</span>
-                            <span class="tech-badge"><i class="fab fa-js me-1"></i>JavaScript</span>
-                            <span class="tech-badge"><i class="fas fa-fire me-1"></i>Firebase</span>
-                            <span class="tech-badge"><i class="fab fa-bootstrap me-1"></i>Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://github.com/RitaAwuorOtieno/Metameta-children-s-home" class="btn btn-custom-primary" target="_blank"><i class="fab fa-github me-2"></i>GitHub</a>
-                        <a href="https://ritaawuorotieno.github.io/Metameta-children-s-home" class="btn btn-outline-custom" target="_blank"><i class="fas fa-heart me-2"></i>Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bonus / Additional Project: Full-Stack Laravel App (showcasing backend skills) -->
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card card h-100">
-                    <img src="https://placehold.co/800x500/6c2e1f/white?text=Laravel+Backend+API" class="card-img-top" alt="Laravel Backend Project">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mb-3">Task Management API (Laravel)</h3>
-                        <p class="card-text text-muted">RESTful API built with Laravel and MySQL featuring authentication, task CRUD operations, and middleware. Demonstrates backend expertise and database design skills.</p>
-                        <div class="mt-3">
-                            <span class="tech-badge"><i class="fab fa-laravel me-1"></i>Laravel</span>
-                            <span class="tech-badge"><i class="fas fa-database me-1"></i>MySQL</span>
-                            <span class="tech-badge"><i class="fab fa-php me-1"></i>PHP</span>
-                            <span class="tech-badge"><i class="fas fa-key me-1"></i>JWT Auth</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-custom-primary" target="_blank"><i class="fab fa-github me-2"></i>GitHub</a>
-                        <a href="#" class="btn btn-outline-custom" target="_blank"><i class="fas fa-server me-2"></i>API Docs</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5: Firebase Realtime App -->
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card card h-100">
-                    <img src="https://placehold.co/800x500/1b3b4f/white?text=Firebase+Chat+App" class="card-img-top" alt="Firebase Realtime App">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mb-3">Live Chat Application</h3>
-                        <p class="card-text text-muted">Real-time chat app using Firebase Firestore and authentication. Users can join rooms, send messages instantly, and see active users — built with JavaScript and Bootstrap for modern UI.</p>
-                        <div class="mt-3">
-                            <span class="tech-badge"><i class="fab fa-js me-1"></i>JavaScript</span>
-                            <span class="tech-badge"><i class="fas fa-fire me-1"></i>Firebase Auth</span>
-                            <span class="tech-badge"><i class="fas fa-database me-1"></i>Firestore</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-custom-primary" target="_blank"><i class="fab fa-github me-2"></i>Source Code</a>
-                        <a href="#" class="btn btn-outline-custom" target="_blank"><i class="fas fa-comment-dots me-2"></i>Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6: React Frontend Dashboard -->
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card card h-100">
-                    <img src="https://placehold.co/800x500/2563eb/white?text=React+Dashboard" class="card-img-top" alt="React Dashboard Project">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mb-3">Analytics Dashboard (React)</h3>
-                        <p class="card-text text-muted">Interactive admin dashboard with charts, data tables, and API integration. Built using React hooks, Context API, and Chart.js for data visualization.</p>
-                        <div class="mt-3">
-                            <span class="tech-badge"><i class="fab fa-react me-1"></i>React</span>
-                            <span class="tech-badge"><i class="fas fa-chart-line me-1"></i>Chart.js</span>
-                            <span class="tech-badge"><i class="fab fa-css3-alt me-1"></i>CSS Modules</span>
-                            <span class="tech-badge"><i class="fas fa-cloud me-1"></i>REST API</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-custom-primary" target="_blank"><i class="fab fa-github me-2"></i>GitHub</a>
-                        <a href="#" class="btn btn-outline-custom" target="_blank"><i class="fas fa-chart-simple me-2"></i>Preview</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Filter Buttons -->
+        <div class="text-center mb-5">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="node">Node.js</button>
+            <button class="filter-btn" data-filter="laravel">Laravel</button>
+            <button class="filter-btn" data-filter="firebase">Firebase</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
         </div>
 
-        <!-- GitHub CTA Section -->
-        <div class="text-center mt-5 pt-4">
-            <div class="bg-white rounded-4 p-5 shadow-sm" style="background: linear-gradient(120deg, #fffbf8, #fff5ef);">
-                <i class="fab fa-github fa-3x text-danger mb-3"></i>
-                <h3 class="fw-bold">Explore More on GitHub</h3>
-                <p class="text-muted mb-4">Check out all my public repositories, contributions, and open-source work.</p>
-                <a href="https://github.com/RitaAwuorOtieno" class="btn btn-danger btn-lg rounded-pill px-5" target="_blank">
-                    <i class="fab fa-github me-2"></i>Visit My GitHub Profile
-                </a>
+        <!-- Projects Grid -->
+        <div class="row g-4" id="projectsGrid">
+            <!-- Project 1 - React -->
+            <div class="col-md-6 col-lg-4 project-card show" data-category="react">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://placehold.co/600x400/dc3545/white?text=React+Dashboard" class="card-img-top" alt="React Dashboard">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Analytics Dashboard</h5>
+                        <p class="text-muted small">React, Chart.js, Context API</p>
+                        <p>Interactive dashboard with real-time data visualization and user authentication.</p>
+                        <span class="badge bg-primary">React</span>
+                        <span class="badge bg-info">Chart.js</span>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="#" class="btn btn-sm btn-danger">Live Demo →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - Node.js -->
+            <div class="col-md-6 col-lg-4 project-card show" data-category="node">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://placehold.co/600x400/198754/white?text=REST+API" class="card-img-top" alt="Node API">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Task Manager API</h5>
+                        <p class="text-muted small">Node.js, Express, MongoDB, JWT</p>
+                        <p>RESTful API with authentication, CRUD operations, and request validation.</p>
+                        <span class="badge bg-success">Node.js</span>
+                        <span class="badge bg-dark">Express</span>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="#" class="btn btn-sm btn-danger">API Docs →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 - Laravel -->
+            <div class="col-md-6 col-lg-4 project-card show" data-category="laravel">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://placehold.co/600x400/6f42c1/white?text=Laravel+Blog" class="card-img-top" alt="Laravel Blog">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Content Management System</h5>
+                        <p class="text-muted small">Laravel, MySQL, Blade, Sanctum</p>
+                        <p>Full-featured CMS with user roles, post management, and comment system.</p>
+                        <span class="badge bg-danger">Laravel</span>
+                        <span class="badge bg-primary">PHP</span>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="#" class="btn btn-sm btn-danger">Live Demo →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 - Firebase -->
+            <div class="col-md-6 col-lg-4 project-card show" data-category="firebase">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://placehold.co/600x400/f7b32b/white?text=Firebase+Chat" class="card-img-top" alt="Firebase Chat">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Real-time Chat App</h5>
+                        <p class="text-muted small">Firebase Auth, Firestore, JavaScript</p>
+                        <p>Instant messaging app with user authentication, chat rooms, and file sharing.</p>
+                        <span class="badge bg-warning text-dark">Firebase</span>
+                        <span class="badge bg-info">WebRTC</span>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="#" class="btn btn-sm btn-danger">Live Demo →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - JavaScript -->
+            <div class="col-md-6 col-lg-4 project-card show" data-category="javascript">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://placehold.co/600x400/20c997/white?text=Calculator" class="card-img-top" alt="Calculator">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Smart Calculator</h5>
+                        <p class="text-muted small">HTML, CSS, JavaScript, Bootstrap</p>
+                        <p>Advanced calculator with history, dark mode, and keyboard support.</p>
+                        <span class="badge bg-warning">JavaScript</span>
+                        <span class="badge bg-primary">Bootstrap</span>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="https://github.com/RitaAwuorOtieno/calculator" class="btn btn-sm btn-danger">Live Demo →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 - React Native -->
+            <div class="col-md-6 col-lg-4 project-card show" data-category="react">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://placehold.co/600x400/0dcaf0/white?text=Mobile+App" class="card-img-top" alt="React Native">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Weather Mobile App</h5>
+                        <p class="text-muted small">React Native, Expo, OpenWeather API</p>
+                        <p>Cross-platform mobile app with real-time weather data and location tracking.</p>
+                        <span class="badge bg-primary">React Native</span>
+                        <span class="badge bg-info">Expo</span>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="#" class="btn btn-sm btn-danger">Demo →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <h5 class="fw-bold">Rita Awuor Otieno</h5>
-                    <p class="text-white-50 small mb-0">&copy; 2026 Rita Awuor Otieno. Full-Stack Developer | All Rights Reserved</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="social-links">
-                        <a href="https://github.com/RitaAwuorOtieno" class="text-white mx-2" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2" target="_blank" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Rita Awuor Otieno | Full-Stack Developer</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Optional: any custom JS for hover effect consistency -->
     <script>
-        // Ensure any external demo links are handled gracefully; placeholders for missing demos.
-        console.log("Projects page fully updated with Rita's full-stack portfolio");
+        // Project Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.add('show');
+                        card.style.display = 'block';
+                    } else {
+                        card.classList.remove('show');
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
-    <!-- Link to external script.js if needed -->
-    <script src="js/script.js"></script>
 </body>
 </html>
