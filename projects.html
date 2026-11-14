@@ -1,239 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Rita Awuor Otieno - Full-Stack Portfolio</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #fefaf7 0%, #fff5f0 100%);
-        }
-        .navbar { background: linear-gradient(135deg, #c9182c 0%, #a31527 100%) !important; }
-        .filter-btn {
-            background: transparent;
-            border: 2px solid #dc3545;
-            color: #dc3545;
-            padding: 8px 20px;
-            border-radius: 40px;
-            font-weight: 600;
-            transition: 0.3s;
-            margin: 5px;
-        }
-        .filter-btn.active, .filter-btn:hover {
-            background: #dc3545;
-            color: white;
-        }
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: 0.3s;
-            height: 100%;
-            display: none;
-        }
-        .project-card.show {
-            display: block;
-            animation: fadeInUp 0.5s ease;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-        footer { background: #0f0f1a; }
-    </style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected web development projects by Rita Awuor Otieno, including websites for Metameta and Vineyard Children's Homes.">
+  <title>Projects | Rita Awuor Otieno</title><link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-xl navbar-dark py-2">
-        <div class="container">
-            <a href="index.html" class="navbar-brand"><i class="fas fa-code me-2"></i>Rita Awuor Otieno</a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarText">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="index.html">Home</a>
-                    <a class="nav-link" href="about.html">About</a>
-                    <a class="nav-link active" href="projects.html">Projects</a>
-                    <a class="nav-link" href="skills.html">Skills</a>
-                    <a class="nav-link" href="blog.html">Blog</a>
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container my-5">
-        <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold mb-3">My Projects</h1>
-            <p class="lead text-muted">Explore my work across different technologies</p>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="text-center mb-5">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="react">React</button>
-            <button class="filter-btn" data-filter="node">Node.js</button>
-            <button class="filter-btn" data-filter="laravel">Laravel</button>
-            <button class="filter-btn" data-filter="firebase">Firebase</button>
-            <button class="filter-btn" data-filter="javascript">JavaScript</button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="row g-4" id="projectsGrid">
-            <!-- Project 1 - React -->
-            <div class="col-md-6 col-lg-4 project-card show" data-category="react">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="https://placehold.co/600x400/dc3545/white?text=React+Dashboard" class="card-img-top" alt="React Dashboard">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Analytics Dashboard</h5>
-                        <p class="text-muted small">React, Chart.js, Context API</p>
-                        <p>Interactive dashboard with real-time data visualization and user authentication.</p>
-                        <span class="badge bg-primary">React</span>
-                        <span class="badge bg-info">Chart.js</span>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="#" class="btn btn-sm btn-danger">Live Demo →</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 - Node.js -->
-            <div class="col-md-6 col-lg-4 project-card show" data-category="node">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="https://placehold.co/600x400/198754/white?text=REST+API" class="card-img-top" alt="Node API">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Task Manager API</h5>
-                        <p class="text-muted small">Node.js, Express, MongoDB, JWT</p>
-                        <p>RESTful API with authentication, CRUD operations, and request validation.</p>
-                        <span class="badge bg-success">Node.js</span>
-                        <span class="badge bg-dark">Express</span>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="#" class="btn btn-sm btn-danger">API Docs →</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 - Laravel -->
-            <div class="col-md-6 col-lg-4 project-card show" data-category="laravel">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="https://placehold.co/600x400/6f42c1/white?text=Laravel+Blog" class="card-img-top" alt="Laravel Blog">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Content Management System</h5>
-                        <p class="text-muted small">Laravel, MySQL, Blade, Sanctum</p>
-                        <p>Full-featured CMS with user roles, post management, and comment system.</p>
-                        <span class="badge bg-danger">Laravel</span>
-                        <span class="badge bg-primary">PHP</span>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="#" class="btn btn-sm btn-danger">Live Demo →</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 - Firebase -->
-            <div class="col-md-6 col-lg-4 project-card show" data-category="firebase">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="https://placehold.co/600x400/f7b32b/white?text=Firebase+Chat" class="card-img-top" alt="Firebase Chat">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Real-time Chat App</h5>
-                        <p class="text-muted small">Firebase Auth, Firestore, JavaScript</p>
-                        <p>Instant messaging app with user authentication, chat rooms, and file sharing.</p>
-                        <span class="badge bg-warning text-dark">Firebase</span>
-                        <span class="badge bg-info">WebRTC</span>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="#" class="btn btn-sm btn-danger">Live Demo →</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 - JavaScript -->
-            <div class="col-md-6 col-lg-4 project-card show" data-category="javascript">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="https://placehold.co/600x400/20c997/white?text=Calculator" class="card-img-top" alt="Calculator">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Smart Calculator</h5>
-                        <p class="text-muted small">HTML, CSS, JavaScript, Bootstrap</p>
-                        <p>Advanced calculator with history, dark mode, and keyboard support.</p>
-                        <span class="badge bg-warning">JavaScript</span>
-                        <span class="badge bg-primary">Bootstrap</span>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="https://github.com/RitaAwuorOtieno/calculator" class="btn btn-sm btn-danger">Live Demo →</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 - React Native -->
-            <div class="col-md-6 col-lg-4 project-card show" data-category="react">
-                <div class="card h-100 border-0 shadow-sm">
-                    <img src="https://placehold.co/600x400/0dcaf0/white?text=Mobile+App" class="card-img-top" alt="React Native">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Weather Mobile App</h5>
-                        <p class="text-muted small">React Native, Expo, OpenWeather API</p>
-                        <p>Cross-platform mobile app with real-time weather data and location tracking.</p>
-                        <span class="badge bg-primary">React Native</span>
-                        <span class="badge bg-info">Expo</span>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="#" class="btn btn-sm btn-danger">Demo →</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2026 Rita Awuor Otieno | Full-Stack Developer</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Project Filtering
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                // Filter projects
-                projectCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.classList.add('show');
-                        card.style.display = 'block';
-                    } else {
-                        card.classList.remove('show');
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html">Rita <span>Otieno</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a class="current" href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="about.html">About</a><a href="contact.html">Contact</a><button class="theme-toggle" type="button" aria-label="Switch color theme">☾</button></div></nav></header>
+  <main class="wrap page-main">
+    <section class="page-intro"><p class="eyebrow">Selected work</p><h1>Projects built for real organisations</h1><p>Websites that help community organisations share their work, connect with supporters and manage content.</p></section>
+    <section class="project-grid" aria-label="Project gallery">
+      <article class="project-card featured">
+        <div class="site-preview"><iframe src="https://dynamic-bombolone-53773f.netlify.app/" title="Live preview of Metameta Children's Home website" loading="lazy" tabindex="-1"></iframe><a class="preview-overlay" href="https://dynamic-bombolone-53773f.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Metameta Children's Home website"><span>Open live website ↗</span></a></div>
+        <div class="project-body"><p class="eyebrow">Featured · Nonprofit website</p><h2>Metameta Children’s Home</h2><p>A responsive website presenting the home’s mission, programmes, events and ways to support its work.</p><ul class="feature-list"><li>Programme, event and organisation information</li><li>Support and donation information</li><li>Photo and video gallery, contact page</li><li>Firebase authentication and database integrations in the codebase</li></ul><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span><span>Netlify</span></div><div class="project-actions"><a class="button primary" href="https://dynamic-bombolone-53773f.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Website ↗</a><a class="button secondary" href="https://github.com/RitaAwuorOtieno/Metameta-children-s-home" target="_blank" rel="noopener noreferrer">View Source Code ↗</a></div><p class="project-note">The repository documents unfinished payment setup and database security review.</p></div>
+      </article>
+      <article class="project-card featured">
+        <div class="site-preview"><iframe src="https://vineyardchildrenshome.org" title="Live preview of Vineyard Children's Home website" loading="lazy" tabindex="-1"></iframe><a class="preview-overlay" href="https://vineyardchildrenshome.org" target="_blank" rel="noopener noreferrer" aria-label="Open Vineyard Children's Home website"><span>Open live website ↗</span></a></div>
+        <div class="project-body"><p class="eyebrow">Featured · Nonprofit website</p><h2>Vineyard Children’s Home</h2><p>A responsive organisation website introducing its programmes, impact, college vision and opportunities to support the children.</p><ul class="feature-list"><li>About, programmes, college and impact pages</li><li>Support and donation information</li><li>Gallery and contact information</li><li>Firebase Authentication, Firestore and Storage integrations</li></ul><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span><span>Netlify</span></div><div class="project-actions"><a class="button primary" href="https://vineyardchildrenshome.org" target="_blank" rel="noopener noreferrer">View Live Website ↗</a><a class="button secondary" href="https://github.com/RitaAwuorOtieno/Vineyard-Children-s-Home" target="_blank" rel="noopener noreferrer">View Source Code ↗</a></div><p class="project-note">The repository includes an administrator dashboard and documents Firebase setup and publication checks.</p></div>
+      </article>
+      <article class="project-card compact"><div class="calc-art" aria-hidden="true"><span>12 × 8</span><strong>96</strong><small>calculator</small></div><div class="project-body"><p class="eyebrow">JavaScript</p><h2>Calculator</h2><p>A calculator project listed in the existing portfolio. Its live functionality and source details need verification before adding a demo.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-actions"><a class="button secondary" href="https://github.com/RitaAwuorOtieno/calculator" target="_blank" rel="noopener noreferrer">Check Source Code ↗</a></div></div></article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-year></span> Rita Awuor Otieno</span><div><a href="https://github.com/RitaAwuorOtieno" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:ritaawuor53@gmail.com">Email ↗</a></div></div></footer>
+  <script src="js/portfolio.js" defer></script>
+</body></html>
