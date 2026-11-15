@@ -9,3 +9,7 @@ Static HTML portfolio. Run locally with `npm start` and open the address printed
 - The calculator is linked as a repository only. The old portfolio did not establish a working live demo, so functionality should be confirmed before presenting it as a completed project.
 
 The original homepage contained unverified client testimonials, project counts, skills and a generated text file presented as a CV. These were removed from the refreshed homepage. No actual CV PDF was identified; `assets/images/Self-declaration-form.pdf` is not represented as a CV. The old blog page still contains sample tutorial content and should be reviewed or unpublished before linking it from navigation. Confirm the preferred professional title, education/certification details, phone number and availability before restoring them to public pages.
+
+## Contact form email delivery
+
+The contact form uses Netlify Forms. Deploy the site to Netlify, then open **Site configuration → Forms → Submission notifications → Add notification → Email notification** and set the recipient to `ritaawuor53@gmail.com`. Netlify may ask the recipient to confirm the notification address. Submissions will be stored by Netlify and emailed after the notification is active. The form cannot deliver email when opened directly from the local filesystem.

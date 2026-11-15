@@ -23,14 +23,17 @@
         <div class="contact-method"><span class="contact-icon" aria-hidden="true">W</span><div><h2>WhatsApp</h2><a href="https://wa.me/254743301079" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a><p>Opens a WhatsApp conversation.</p></div></div>
         <div class="contact-method"><span class="contact-icon" aria-hidden="true">GH</span><div><h2>GitHub</h2><a href="https://github.com/RitaAwuorOtieno" target="_blank" rel="noopener noreferrer">github.com/RitaAwuorOtieno ↗</a></div></div>
       </div>
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" name="contact" method="POST" action="/contact.html?success=true" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="subject" value="New portfolio contact form submission" data-remove-prefix>
+        <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
         <p class="eyebrow">Send a message</p><h2>What would you like to discuss?</h2>
         <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required>
         <label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" required>
-        <label for="subject">Subject</label><input id="subject" name="subject" required>
+        <label for="topic">Subject</label><input id="topic" name="topic" required>
         <label for="message">Message</label><textarea id="message" name="message" required></textarea>
-        <button class="button primary" type="submit">Open email draft ↗</button>
-        <p class="form-note">Your email application will open with the message details. This page does not send or store submissions.</p>
+        <button class="button primary" type="submit">Send message</button>
+        <p class="form-note">Your message is submitted securely through Netlify Forms. Email notifications must be enabled for this form in the Netlify site settings.</p>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </section>
@@ -38,18 +41,9 @@
   <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-year></span> Rita Awuor Otieno</span><div><a href="https://github.com/RitaAwuorOtieno" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:ritaawuor53@gmail.com">Email ↗</a></div></div></footer>
   <script src="js/portfolio.js" defer></script>
   <script>
-    document.getElementById('contactForm').addEventListener('submit', event => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      if (!form.reportValidity()) return;
-      const name = form.elements.name.value.trim();
-      const email = form.elements.email.value.trim();
-      const subject = form.elements.subject.value.trim();
-      const message = form.elements.message.value.trim();
-      const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
-      document.getElementById('formStatus').textContent = 'Opening your email application…';
-      window.location.href = `mailto:ritaawuor53@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-    });
+    if (new URLSearchParams(window.location.search).get('success') === 'true') {
+      document.getElementById('formStatus').textContent = 'Thanks — your message was submitted successfully.';
+    }
   </script>
 </body>
 </html>
